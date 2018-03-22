@@ -1,3 +1,4 @@
+import { CategoryComponent } from './category/category.component';
 import {Component, OnInit} from '@angular/core';
 
 @Component({

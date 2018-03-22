@@ -25,7 +25,7 @@ export class CategoryComponent implements OnInit {
      
       console.log(response);
       this.Categorynews = response.articles;
-      console.log(this.Categorynews);
+      console.log(this.category);
       /*
         {
           status: "ok",
