@@ -1,0 +1,39 @@
+
+<div [ngSwitch]="type">
+    <!-- tamplate 1 -->
+    <div *ngSwitchCase="'tamplate1'" >
+    <div class="slick_slider2">
+    <div class="single_featured_slide" *ngFor="let news of Categorynews | slice:0:3"> 
+        <a href="{{news.url}}"><img src="{{news.urlToImage}}" alt=""></a>
+        <h2><a href="{{news.url}}">{{news.title}}</a></h2>
+        <p>{{news.description}}</p>
+        <hr>
+      </div>
+    </div>
+  </div>
+  <!-- tamplate 2 -->
+  <div *ngSwitchCase="'tamplate2'" >
+      <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm6">
+            <div class="latest_slider">
+              <div class="slick_slider">
+                <div class="single_iteam" *ngFor="let news of Categorynews | slice:19"><img src="{{news.urlToImage}}" alt="">
+                  <h2><a class="slider_tittle" href="{{news.url}}">{{news.title}}</a></h2>
+                </div>
+               </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm6">
+            <div class="content_top_right">
+              <ul class="featured_nav wow fadeInDown">
+                <li *ngFor="let news of Categorynews | slice:12:16"><img src="{{news.urlToImage}}" alt="">
+                  <div class="title_caption"><a href="{{news.url}}">{{news.title}}</a></div>
+                </li>
+               
+              </ul>
+            </div>
+          </div>
+        </div>
+  </div>
+</div>
+  
