@@ -35,5 +35,62 @@
           </div>
         </div>
   </div>
+
+  <!-- tamplate recent -->
+  <div *ngSwitchCase="'recent'" >
+  <div class="single_bottom_rightbar">
+    <h2>Recent Post</h2>
+    <ul class="small_catg popular_catg wow fadeInDown">
+      <li *ngFor="let news of Categorynews | slice:15:18">
+        <div class="media wow fadeInDown"> <a href="#" class="media-left"><img alt="" src="{{news.urlToImage}}"> </a>
+          <div class="media-body">
+            <h4 class="media-heading"><a href="{{news.url}}">{{news.title}}</a></h4>
+            <p>{{news.description}}</p>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+  <!-- tamplate recent -->
+  <div *ngSwitchCase="'tranding'" >
+
+<div class="single_bottom_rightbar">
+  <ul role="tablist" class="nav nav-tabs custom-tabs">
+    <li class="active" role="presentation"><a data-toggle="tab" role="tab" aria-controls="home" href="#mostPopular">Tranding</a></li>
+    <li role="presentation"><a data-toggle="tab" role="tab" aria-controls="messages" href="#recentComent">Popular</a></li>
+  </ul>
+  <div class="tab-content">
+    <div id="mostPopular" class="tab-pane fade in active" role="tabpanel">
+      <ul class="small_catg popular_catg wow fadeInDown">
+        <li *ngFor="let news of Categorynews | slice:5:7">
+          <div class="media wow fadeInDown"> <a href="#" class="media-left"><img alt="" src="{{news.urlToImage}}"> </a>
+            <div class="media-body">
+              <h4 class="media-heading"><a href="{{news.url}}">{{news.title}}</a></h4>
+              <p>{{news.description}}</p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div id="recentComent" class="tab-pane fade" role="tabpanel">
+      <ul class="small_catg popular_catg">
+        <li  *ngFor="let news of Categorynews | slice:7:9">
+          <div class="media wow fadeInDown"> <a class="media-left" href="#"><img src="{{news.urlToImage}}" alt=""></a>
+            <div class="media-body">
+              <h4 class="media-heading"><a href="{{news.url}}">{{news.title}}</a></h4>
+              <p>{{news.description}}</p>
+            </div>
+          </div>
+        </li>
+       
+      </ul>
+    </div>
+  </div>
+</div>
+
+</div>
+
 </div>
   

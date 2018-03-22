@@ -1,6 +1,5 @@
 import { NewsService } from './../news.service';
 import {Component, OnInit,Input} from '@angular/core';
-
 @Component({
   selector: 'home-category',
   templateUrl: './category.component.html',
