@@ -9,7 +9,7 @@
         "outDir": "dist/browser",
         "assets": [
           "assets"
-        //  "favicon.ico"
+      
 	
         ],
         "index": "index.html",
