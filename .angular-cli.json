@@ -8,8 +8,8 @@
         "root": "src",
         "outDir": "dist/browser",
         "assets": [
-          "assets",
-          "favicon.ico"
+          "assets"
+        //  "favicon.ico"
 	
         ],
         "index": "index.html",
